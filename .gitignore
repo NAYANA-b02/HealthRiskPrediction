@@ -1,6 +1,33 @@
-venv/
+# Ignore Python cache and environment
 __pycache__/
 *.pyc
-*.pkl
-*.joblib
+*.pyo
+*.pyd
+*.log
+.venv/
+venv/
+env/
+ENV/
+
+# Ignore system files
 .DS_Store
+Thumbs.db
+
+# Ignore large/unnecessary data files
+data/*.csv
+data/*.xlsx
+data/*.zip
+
+# Allow only small reference datasets
+!data/expanded_reference_dataset.csv
+!data/age_specific_suggestions_dataset.csv
+!data/symptom_dataset_cleaned.csv
+
+# Ignore all model files except compressed ones
+models/*
+!models/*compressed.joblib
+
+# Ignore local IDE/project configs
+.idea/
+.vscode/
+*.iml

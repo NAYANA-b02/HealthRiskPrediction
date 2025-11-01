@@ -63,3 +63,17 @@ joblib.dump(scaler, os.path.join(MODEL_DIR, "diabetes_scaler.joblib"))
 joblib.dump(imputer, os.path.join(MODEL_DIR, "diabetes_imputer.joblib"))
 
 print("\n✅ Saved: diabetes_model.joblib, diabetes_scaler.joblib, diabetes_imputer.joblib")
+
+# === COMPRESS MODEL (Optional but recommended for deployment) ===
+compressed_path = os.path.join(MODEL_DIR, "diabetes_model_compressed.joblib")
+
+print("\n🔄 Compressing diabetes model for deployment...")
+joblib.dump(model, compressed_path, compress=('xz', 3))
+
+original_size = os.path.getsize(os.path.join(MODEL_DIR, "diabetes_model.joblib")) / (1024 * 1024)
+compressed_size = os.path.getsize(compressed_path) / (1024 * 1024)
+
+print(f"📦 Compression complete!")
+print(f"   Original size : {original_size:.2f} MB")
+print(f"   Compressed size: {compressed_size:.2f} MB")
+print(f"   Saved model → {compressed_path}")

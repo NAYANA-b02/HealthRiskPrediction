@@ -28,7 +28,7 @@ def safe_joblib_load(p: Path):
 @st.cache_resource
 def load_assets():
     assets = {
-        "diabetes_model": safe_joblib_load(MODELS_DIR / "diabetes_model.joblib"),
+        "diabetes_model": safe_joblib_load(MODELS_DIR / "diabetes_model_compressed.joblib"),
         "diabetes_scaler": safe_joblib_load(MODELS_DIR / "diabetes_scaler.joblib"),
         "diabetes_imputer": safe_joblib_load(MODELS_DIR / "diabetes_imputer.joblib"),
         "hypertension_model": safe_joblib_load(MODELS_DIR / "hypertension_model.joblib"),
