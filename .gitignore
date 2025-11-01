@@ -1,33 +1,22 @@
-# Ignore Python cache and environment
+# Ignore only the large diabetes model file
+models/diabetes_model.joblib
+
+# Keep all other models and compressed versions
+!models/*compressed.joblib
+!models/diabetes_scaler.joblib
+!models/diabetes_imputer.joblib
+!models/hypertension_model.joblib
+!models/hypertension_scaler.joblib
+!models/hypertension_imputer.joblib
+
+# Common ignores
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-*.log
-.venv/
+.env
 venv/
-env/
-ENV/
-
-# Ignore system files
-.DS_Store
-Thumbs.db
-
-# Ignore large/unnecessary data files
-data/*.csv
-data/*.xlsx
-data/*.zip
-
-# Allow only small reference datasets
-!data/expanded_reference_dataset.csv
-!data/age_specific_suggestions_dataset.csv
-!data/symptom_dataset_cleaned.csv
-
-# Ignore all model files except compressed ones
-models/*
-!models/*compressed.joblib
-
-# Ignore local IDE/project configs
 .idea/
-.vscode/
-*.iml
+.DS_Store
+
+# Streamlit & logs
+.streamlit/secrets.toml
+logs/
