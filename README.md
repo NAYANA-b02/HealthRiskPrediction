@@ -65,27 +65,24 @@ Displays:
 
 HealthRiskPredictor/
 │
-├── app.py
-├── train_diabetes.py
-├── train_hypertension.py                                # Main Streamlit application
-├── requirements.txt                      # Required Python packages
-│
-├── models/                               # ML models and scalers
-│   ├── diabetes_model.joblib
-│   ├── diabetes_scaler.joblib
-│   ├── diabetes_imputer.joblib
-│   ├── hypertension_model.joblib
-│   ├── hypertension_scaler.joblib
-│   ├── hypertension_imputer.joblib
-│
-├── data/                                 # Reference & suggestion datasets
-│   ├── expanded_reference_dataset.csv
-│   ├── age_specific_suggestions_dataset.csv
-│   ├── symptom_dataset_cleaned.csv
-│   ├── Diabetes_1000_based_on_previous_rows.csv
-│   ├── Expanded_Hypertension_1000.csv
-│
-└── README.md                             # Documentation
+app.py
+train_diabetes.py
+train_hypertension.py                                
+requirements.txt                      
+models/                               
+   diabetes_compressed_model.joblib
+   diabetes_scaler.joblib
+   diabetes_imputer.joblib
+   hypertension_model.joblib
+   hypertension_scaler.joblib
+   hypertension_imputer.joblib
+data/                                 # Reference & suggestion datasets
+   expanded_reference_dataset.csv
+   age_specific_suggestions_dataset.csv
+   symptom_dataset_cleaned.csv
+   Diabetes_1000_based_on_previous_rows.csv
+   Expanded_Hypertension_1000.csv
+README.md                             # Documentation
 
 ⚙️ Local Installation Guide
 
@@ -208,6 +205,8 @@ Low BP/Sugar automatically indicates **Hypotension / Hypoglycemia**.
 
 **Developed by:** *Nayana Basava*
 **Project Title:** *AI-Based Health Risk Prediction System*
+
+app link: https://healthriskprediction.streamlit.app/
 **Domain:** Artificial Intelligence & Healthcare
 **Year:** 2025
 
